@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+:root {
+  --color-benin-green: #008751;
+  --color-benin-yellow: #e9b400;
+  --color-benin-red: #e8112d;
+  --color-benin-dark: #292a2c;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-dancing: 'Dancing Script', cursive;
+}
+
+/* === Global Typography & Base === */
+body {
+  font-family: var(--font-sans);
+  background-color: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-dancing {
+  font-family: var(--font-dancing);
+}
+
+/* === Benin Colors & Gradients === */
+.text-benin-green {
+  color: var(--color-benin-green);
+}
+
+.bg-benin-green {
+  background-color: var(--color-benin-green);
+}
+
+.border-benin-green {
+  border-color: var(--color-benin-green);
+}
+
+.text-benin-yellow {
+  color: var(--color-benin-yellow);
+}
+
+.bg-benin-yellow {
+  background-color: var(--color-benin-yellow);
+}
+
+.text-benin-red {
+  color: var(--color-benin-red);
+}
+
+.bg-benin-red {
+  background-color: var(--color-benin-red);
+}
+
+.benin-gradient-bg {
+  background-image: linear-gradient(to bottom right, var(--color-benin-green), #3c9849, #65a93e, #8eb730, #bbc421, #d2bd06, var(--color-benin-yellow), #ffaa00, #fe8c01, #fa6c13, #f34921, var(--color-benin-red));
+}
+
+.benin-gradient-text {
+  background-image: linear-gradient(to right, var(--color-benin-green), var(--color-benin-yellow), var(--color-benin-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-benin {
+  background-image: linear-gradient(to right, var(--color-benin-green), #e9b400, var(--color-benin-red));
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(0, 135, 81, 0.39);
+}
+
+.btn-benin:hover {
+  background-image: linear-gradient(to right, #006b40, #c99a00, #c00e25);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 135, 81, 0.23);
+}
+
+/* === AgentFire Style Navigation & Layout === */
+
+/* Top Navbar */
+.af-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 3px solid var(--color-benin-green);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Sidebar */
+.af-sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 75px;
+  height: calc(100vh - 60px);
+  background-color: var(--color-benin-dark);
+  overflow: hidden;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e5e7eb;
+}
+
+.af-sidebar:hover {
+  width: 240px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.af-sidebar-link {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.af-sidebar-link:hover {
+  background-color: var(--color-benin-green);
+  border-left: 3px solid var(--color-benin-yellow);
+}
+
+.af-sidebar-icon {
+  min-width: 24px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.af-sidebar-text {
+  margin-left: 20px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s;
+  transition-delay: 0.1s;
+}
+
+.af-sidebar:hover .af-sidebar-text {
+  opacity: 1;
+}
+
+/* Main Content Adjustment */
+.af-content {
+  margin-top: 60px;
+  min-height: calc(100vh - 60px);
+  background-color: #f3f4f6;
+  transition: margin-left 0.3s;
+}
+
+.af-content.with-sidebar {
+  margin-left: 75px;
+}
+
+@media (max-width: 768px) {
+  .af-sidebar {
+    width: 0;
+    transition: width 0.3s;
+  }
+
+  .af-sidebar.mobile-open {
+    width: 240px;
+  }
+
+  .af-content.with-sidebar {
+    margin-left: 0;
+  }
+
+  .af-sidebar:hover .af-sidebar-text {
+    opacity: 1;
+  }
+
+  .af-sidebar-text {
+    opacity: 1;
+  }
+}
+
+/* === Neumorphism Form Styles === */
+.neu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+  font-family: var(--font-sans);
+  color: #4b5563;
+}
+
+.neu-main {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-width: 1000px;
+}
+
+/* Form Elements */
+.neu-input {
+  width: 100%;
+  max-width: 380px;
+  height: 50px;
+  margin: 10px 0;
+  padding-left: 20px;
+  padding-right: 45px;
+  font-size: 15px;
+  color: #1f2937;
+  border: none;
+  outline: none;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  box-shadow: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.neu-input:focus {
+  box-shadow: inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff;
+  border-left: 2px solid var(--color-benin-green);
+}
+
+/* Password Wrapper */
+.pwd-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.pwd-eye {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  cursor: pointer;
+  z-index: 50;
+  border: none;
+  background: transparent;
+}
+
+.pwd-eye:hover {
+  color: var(--color-benin-green);
+}
+
+.neu-button {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.neu-button:active {
+  transform: scale(0.97);
+}
+
+.neu-button.secondary {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.neu-button.secondary:hover {
+  background-color: #d1d5db;
+}
+
+/* Theme Colors matched to Benin Flag Utility Classes for Buttons */
+.neu-button.bg-lime {
+  background-color: var(--color-benin-green);
+}
+
+.neu-button.bg-lime:hover {
+  background-color: #006b40;
+}
+
+.neu-button.bg-yellow {
+  background-color: var(--color-benin-yellow);
+}
+
+.neu-button.bg-yellow:hover {
+  background-color: #c99a00;
+}
+
+.neu-button.bg-red {
+  background-color: var(--color-benin-red);
+}
+
+.neu-button.bg-red:hover {
+  background-color: #c00e25;
+}
+
+/* Animation Utility Classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.4s ease-out forwards;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}

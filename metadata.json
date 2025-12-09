@@ -1,0 +1,7 @@
+{
+  "name": "VoyageConnect - Agency Management System",
+  "description": "A comprehensive platform for transport agencies to manage stations, routes, and reservations, and for clients to book trips seamlessly.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
