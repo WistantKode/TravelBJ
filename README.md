@@ -1,84 +1,86 @@
-# 🚌 VoyageBj - Plateforme de Réservation de Transport au Bénin
+# 🚌 TravelBJ - Bus Booking Platform in Benin
 
 <div align="center">
 
-![VoyageBj Banner](https://via.placeholder.com/1200x300/008751/FFFFFF?text=VoyageBj+Plateforme+Officielle)
+![TravelBJ Banner](https://via.placeholder.com/1200x300/008751/FFFFFF?text=TravelBJ+Official+Platform)
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)](https://github.com/voyagebj)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)](https://github.com/REBCDR07/TravelBJ)
+[![pnpm](https://img.shields.io/badge/pnpm-9.x-F69220.svg?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 [![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-4.0.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/license-Private-red.svg?style=for-the-badge)](LICENSE)
 
-**La première plateforme digitale qui révolutionne le transport interurbain au Bénin.**
-Connectez-vous, réservez, voyagez.
+**The first digital platform revolutionizing intercity transport in Benin.**
+Connect, book, travel.
 
-[Fonctionnalités](#-fonctionnalités) • [Architecture](#-architecture) • [Workflows](#-workflows) • [Documentation](#-documentation)
+[Features](#-key-features) • [Architecture](#-project-architecture) • [Workflows](#-business-workflows) • [Documentation](#-documentation)
 
 </div>
 
 ---
 
-## 📋 Table des Matières
+## 📋 Table of Contents
 
-- [🎯 Vue d'ensemble](#-vue-densemble)
-- [✨ Fonctionnalités Clés](#-fonctionnalités-clés)
-- [🛠 Stack Technique](#-stack-technique)
-- [🏗 Architecture du Projet](#-architecture-du-projet)
-- [🔄 Workflows Métier](#-workflows-métier)
-- [🚀 Installation & Démarrage](#-installation--démarrage)
+- [🎯 Overview](#-overview)
+- [✨ Key Features](#-key-features)
+- [🛠 Tech Stack](#-tech-stack)
+- [🏗 Project Architecture](#-project-architecture)
+- [🔄 Business Workflows](#-business-workflows)
+- [🚀 Getting Started](#-getting-started)
 - [📚 Documentation](#-documentation)
-- [🤝 Contribution](#-contribution)
+- [🤝 Contributing](#-contributing)
 
 ---
 
-## 🎯 Vue d'ensemble
+## 🎯 Overview
 
-**VoyageBj** est une solution SaaS complète conçue pour moderniser le secteur du transport au Bénin. Elle offre une interface unifiée pour :
-1.  **Les Voyageurs** : Réservation de billets en ligne, et suivi des trajets.
-2.  **Les Compagnies** : Gestion de flotte, planification des départs, et suivi des réservations.
-3.  **L'Administration** : Supervision du réseau, validation des acteurs, et statistiques globales.
+**TravelBJ** is a comprehensive SaaS solution designed to modernize the transportation sector in Benin. It provides a unified interface for:
+1.  **Travelers**: Online ticket booking and real-time trip tracking.
+2.  **Companies**: Fleet management, departure scheduling, and reservation monitoring.
+3.  **Administration**: Network supervision, stakeholder validation, and global analytics.
 
-### 🎨 Identité Visuelle
-Le design system est ancré dans l'identité nationale :
-- 🟢 **Vert (#008751)** : Espérance & Renouveau (Actions principales, Succès)
-- 🟡 **Jaune (#FCD116)** : Richesse & Présage (Éléments Premium, Avertissements)
-- 🔴 **Rouge (#E8112D)** : Courage & Force (Actions destructives, Erreurs)
+### 🎨 Visual Identity
+The design system is rooted in the national identity of Benin:
+- 🟢 **Green (#008751)**: Hope & Renewal (Primary Actions, Success States)
+- 🟡 **Yellow (#FCD116)**: Wealth & Prosperity (Premium Elements, Warnings)
+- 🔴 **Red (#E8112D)**: Courage & Strength (Destructive Actions, Error States)
 
 ---
 
-## ✨ Fonctionnalités Clés
+## ✨ Key Features
 
-| Module | Fonctionnalités |
+| Module | Features |
 | :--- | :--- |
-| **👤 Espace Voyageur** | • Recherche intelligente (Ville, Date, Compagnie)<br>• Sélection de siège visuelle<br>• Billets QR Code (PDF/PNG)<br>• Historique |
-| **🏢 Espace Compagnie** | • Dashboard Analytique (Analytiques des réservations, Taux de remplissage)<br>• Gestion des Gares & Trajets<br>• Validation des embarquements (Scan QR)<br>• Rapports financiers exportables |
-| **🛡️ Espace Admin** | • KYC Compagnies (Vérification IFU, RCCM)<br>• Supervision du trafic en temps réel<br>• Gestion des utilisateurs & Rôles<br>• Audit logs |
+| **👤 Traveler Space** | • Smart search (City, Date, Company)<br>• Visual seat selection<br>• QR Code tickets (PDF/PNG)<br>• Trip history |
+| **🏢 Company Space** | • Analytical Dashboard (Booking analytics, Occupancy rate)<br>• Station & Route Management<br>• Boarding validation via QR Scan<br>• Exportable financial reports |
+| **🛡️ Admin Space** | • Company KYC (IFU, RCCM verification)<br>• Real-time traffic supervision<br>• User & Role Management<br>• Comprehensive audit logs |
 
 ---
 
-## 🛠 Stack Technique
+## 🛠 Tech Stack
 
 ### Frontend
-- **Framework** : React 19 (Hooks, Context API)
-- **Langage** : TypeScript 5.7 (Strict Mode)
-- **Build Tool** : Vite 6.1 (HMR, Optimisation)
-- **Styling** : Tailwind CSS 4 (JIT, Design System)
+- **Framework**: React 19 (with Hooks)
+- **Language**: TypeScript 5.7 (Strict Mode)
+- **Build Tool**: Vite 6.1 (HMR, Optimized Builds)
+- **Styling**: Tailwind CSS 4 (JIT Engine, Design System)
+- **Package Manager**: pnpm
 
-### Bibliothèques Principales
-| Lib | Usage |
+### Core Libraries
+| Library | Description |
 | :--- | :--- |
-| `lucide-react` | Icônes vectorielles légères |
-| `recharts` | Visualisation de données (Graphiques) |
-| `react-router-dom` | Routage client-side (SPA) |
-| `jspdf` / `html2canvas` | Génération de documents PDF |
-| `framer-motion` | Animations fluides (Transitions) |
+| `lucide-react` | Lightweight and beautiful vector icons |
+| `recharts` | Data visualization and charting |
+| `react-router-dom` | Client-side routing for a Single Page Application (SPA) |
+| `jspdf` / `html2canvas` | PDF document generation from HTML |
+| `framer-motion` | Fluid animations and gesture support |
 
 ---
 
-## 🏗 Architecture du Projet
+## 🏗 Project Architecture
 
-L'architecture suit une approche **Feature-Based** pour une scalabilité maximale.
+The project follows a scalable **Feature-Based** architecture to promote modularity and maintainability.
 
 ```mermaid
 graph TD
@@ -86,101 +88,107 @@ graph TD
     SRC --> SHARED[shared/]
     
     FEAT --> AUTH[auth/ (Login, Signup)]
-    FEAT --> CLIENT[client/ (Dashboard Voyageur)]
-    FEAT --> COMPANY[company/ (Dashboard Compagnie)]
-    FEAT --> ADMIN[admin/ (Dashboard Admin)]
+    FEAT --> CLIENT[client/ (Traveler Dashboard)]
+    FEAT --> COMPANY[company/ (Company Dashboard)]
+    FEAT --> ADMIN[admin/ (Admin Dashboard)]
     FEAT --> PUBLIC[public/ (Landing, Search)]
     
     SHARED --> COMPS[components/ (UI Kit)]
     SHARED --> SERV[services/ (API, Storage)]
-    SHARED --> TYPES[types/ (Interfaces TS)]
+    SHARED --> TYPES[types/ (TS Interfaces)]
     SHARED --> UTILS[utils/ (Helpers)]
 ```
 
 ---
 
-## 🔄 Workflows Métier
+## 🔄 Business Workflows
 
-### 1. Processus de Réservation (Voyageur)
+### 1. Traveler Booking Process
 
 ```mermaid
 sequenceDiagram
-    participant U as Voyageur
-    participant S as Système
-    participant C as Compagnie
+    participant U as Traveler
+    participant S as System
+    participant C as Company
     
-    U->>S: Recherche (Départ, Arrivée, Date)
-    S-->>U: Liste des trajets disponibles
-    U->>S: Sélectionne un trajet & Siège
-    U->>S: Confirme la réservation (PENDING)
-    Note over U,S: Génération du Ticket Provisoire
-    C->>S: Valide le paiement/embarquement
-    S-->>U: Ticket Final (QR Code Validé)
-    S->>S: Mise à jour du statut (COMPLETED)
+    U->>S: Search for a trip (Departure, Arrival, Date)
+    S-->>U: Display list of available trips
+    U->>S: Select a trip and seat
+    U->>S: Confirm booking (status: PENDING)
+    Note over U,S: Provisional ticket is generated
+    C->>S: Validate payment or boarding
+    S-->>U: Receive final ticket with validated QR Code
+    S->>S: Update trip status to COMPLETED
 ```
 
-### 2. Onboarding Compagnie (KYC)
+### 2. Company Onboarding (KYC)
 
 ```mermaid
 graph LR
-    A[Inscription Compagnie] -->|Upload Docs| B(Statut: PENDING)
-    B --> C{Validation Admin}
-    C -->|Documents Valides| D[Statut: APPROVED]
-    C -->|Documents Incomplets| E[Statut: REJECTED]
-    D --> F[Accès Dashboard]
+    A[Company Registers] -->|Uploads Documents| B(Status: PENDING)
+    B --> C{Admin Validation}
+    C -->|Valid Documents| D[Status: APPROVED]
+    C -->|Incomplete Documents| E[Status: REJECTED]
+    D --> F[Gains Dashboard Access]
     E --> A
 ```
 
 ---
 
-## 🚀 Installation & Démarrage
+## 🚀 Getting Started
 
-### Prérequis
-- **Node.js** v18+
-- **npm** v9+
+This project uses [pnpm](https://pnpm.io/) as the package manager.
+
+### Prerequisites
+- **Node.js**: `v18.x` or higher
+- **pnpm**: `v9.x` or higher
 
 ### Quick Start
 
-```bash
-# 1. Cloner le projet
-git clone https://github.com/REBCDR07/VoyageBj.git
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/REBCDR07/TravelBJ.git
+    cd TravelBJ
+    ```
 
-# 2. Installer les dépendances
-cd VoyageBj
-npm install
+2.  **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
 
-# 3. Lancer en mode développement
-npm run dev
-```
+3.  **Run the development server:**
+    ```bash
+    pnpm dev
+    ```
 
-> L'application sera accessible sur `http://localhost:5173`
+> The application will be running at `http://localhost:5173`.
 
 ---
 
 ## 📚 Documentation
 
-La documentation technique détaillée est disponible dans le dossier `/docs` :
+Detailed technical documentation is available in the `/docs` folder:
 
-- [📂 Architecture Détaillée](docs/ARCHITECTURE.md) : Structure des dossiers et choix techniques.
-- [🚦 Guide de Démarrage](docs/GUIDE_DEMARRAGE.md) : Setup environnement et scripts.
-- [📝 Règles de Contribution](docs/CONTRIBUTING.md) : Conventions de code et Git flow.
+- [📂 Detailed Architecture](docs/ARCHITECTURE.md): In-depth explanation of the folder structure and technical choices.
+- [🚦 Getting Started Guide](docs/GETTING_STARTED_GUIDE.md): Full guide on environment setup and available scripts.
+- [📝 Contribution Rules](docs/CONTRIBUTING.md): Guidelines on code conventions, Git flow, and pull requests.
 
 ---
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1.  Forker le projet
-2.  Créer une branche (`git checkout -b feature/AmazingFeature`)
-3.  Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
-4.  Push vers la branche (`git push origin feature/AmazingFeature`)
-5.  Ouvrir une Pull Request
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
 ---
 
 <div align="center">
 
-**VoyageBj** © 2025 - Made in Bénin 🇧🇯
+**TravelBJ** © 2025 - Made with ❤️ in Cameroon
 
 </div>
